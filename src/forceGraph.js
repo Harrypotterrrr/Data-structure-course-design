@@ -5,19 +5,19 @@ var width = 800,
     height = 500;
 
 var force, svg;
-var edges_line,edges_text,circle,text
+var edges_line,edges_text,circle,text;
 
 function update() {
 
 
-    force = d3.layout.force()//layout将json格式转化为力学图可用的格式
-    .nodes(d3.values(nodes))//设定节点数组
-    .links(links)//设定连线数组
-    .size([width, height])//作用域的大小
-    .linkDistance(180)//连接线长度
-    .charge(-1500)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
-    .on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
-    .start();//开始转换
+    force = d3.layout.force()               //layout将json格式转化为力学图可用的格式
+    .nodes(d3.values(nodes))                //设定节点数组
+    .links(links)                           //设定连线数组
+    .size([width, height])                  //作用域的大小
+    .linkDistance(180)                      //连接线长度
+    .charge(-1500)                          //顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
+    .on("tick", tick)                       //指时间间隔，隔一段时间刷新一次画面
+    .start();                               //开始转换
 
     svg = d3.select("#force").append("svg")
             .attr("width", width)
@@ -52,7 +52,6 @@ function update() {
         .enter()
         .append("text")
         .style("pointer-events", "none")
-        //.attr("class","linetext")
         .attr({
             'class': 'edgelabel',
             'id': function (d, i) {
