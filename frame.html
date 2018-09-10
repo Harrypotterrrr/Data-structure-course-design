@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>数据结构课程设计</title>
+    <link rel="stylesheet" href="css/font.css">
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <h1>数据结构课程设计</h1>
+    </div>
+    <div id="signature_line">
+        <h3>贾昊霖 计算机1班 1651574</h3>
+    </div>
+</div>
+
+<div id="buttons">
+        <button onclick="GetValue()">展示原始图</button>
+        <br>
+        <button onclick="GetAdjList()">显示出邻接表</button>
+        <br>
+        输入：<input type="text" value="" id="textId">
+        <br>
+        <button onclick="GetDijkstra()">显示出最短路径</button>
+        <br>
+        <button onclick="GetPrim()">展示最小生成树Prim</button>
+        <br>
+        <button onclick="GetKruskal()">展示最小生成树Kruskal</button>
+        <div id="para">
+        <textarea id="outputArea" rows="20" cols="30">
+        outputArea
+        </textarea>
+</div>
+</div>
+<div id="force"></div>
+
+<!--<script src=lib/d3.js ></script>-->
+<script src="lib/d3_v3.js"></script>
+<script src="src/forceGraph.js"></script>
+<script src="src/algorithm.js"></script>
+<script src="src/highlightLine.js"></script>
+<script src="src/link_algorithm_graph.js"></script>
+</body>
+</html>
