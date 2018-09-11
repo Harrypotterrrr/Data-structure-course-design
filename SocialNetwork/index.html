@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Integrated Application</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <script defer src="lib/font.js"></script>
+    <script src="lib/d3.v5.min.js"></script>
+</head>
+
+<body>
+<!--<section class="hero is-dark", value=$blue>-->
+
+<section class="hero is-link">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title ">Social Network</h1>
+            <h2 class="subtitle">Haolin Jia 1651574</h2>
+        </div>
+    </div>
+</section>
+
+<div class="tile is-ancestor" style="margin: 10px 5px 10px 5px;">
+
+
+    <div class="tile is-3 is-vertical is-parent">
+
+
+        <div class="tile is-child box">
+            <div class="content">
+                <h2>Problem description：</h2>
+                <p>In a social relationship network, a person's attributes include the region, the school at all levels,
+                    the work unit, etc. Each person has many friends and can join certain groups according to personal
+                    interests and social activities. It is now necessary to design an algorithm that starts from someone
+                    in the social network and looks for someone they might know. For example, according to the number of
+                    friends of two people and their group, we can discover people acquainted, or even by finding from
+                    the school they were in.</p>
+                <ul>
+                    <li>Display a person's social network through a graphical interface</li>
+                    <li>Find a person you might know (not a friend) and see how they relate to each other(from common
+                        friends).
+                    </li>
+                    <li>Sort these people based on the degree of relevance they might know</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="columns" style="margin: 10px 5px 10px 5px;">
+            <div class="column">
+                <div class="box">
+                    <div class="content">
+                        <h2>Find someone maybe related</h2>
+                    </div>
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input class="input" type="text" name="name" id="input7"
+                                   placeholder="please input the name">
+                        </div>
+                        <div class="control">
+                            <input class="button is-link" type="button" name="click2" value="find" id="button2">
+                        </div>
+                    </div>
+                    <div class="content" id="output"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="tile is-parent">
+        <div class="tile is-child box">
+            <div class="content">
+                <h2>Social relationship network</h2>
+            </div>
+            <svg width="1000" height="800"></svg>
+        </div>
+    </div>
+
+
+    <div class="tile is-child is-2 box">
+        <div class="content">
+            <h2>Add one person with its property</h2>
+        </div>
+        <div class="field">
+            <div class="field">
+                <div class="control">
+                    Name：<input class="input is-dark" type="text" placeholder="Name" name="name" id="input1">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    District：<input class="input is-dark" type="text" placeholder="Restrict" name="location"
+                                    id="input2">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    Primary school：<input class="input is-dark" type="text" placeholder="Primary school" name="school1"
+                                          id="input3">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    Middle school：<input class="input is-dark" type="text" placeholder="Middle school" name="school2"
+                                         id="input4">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    University：<input class="input is-dark" type="text" placeholder="University" name="school3"
+                                      id="input5">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    Company：<input class="input is-dark" type="text" placeholder="company" name="workplace" id="input6">
+                </div>
+            </div>
+
+            <div class="control">
+                <input class="button is-link" type="button" name="click1" value="Add" id="button1">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="lib/jQuery.js"></script>
+<script src="js/AddEdge.js"></script>
+<script src="js/AddNode.js"></script>
+<script src="js/SocialNetwork.js"></script>
+</body>
+
+</html>
